@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Container, StyledLink } from "./style";
+import { useNavigate } from "react-router-dom";
 
+import Loading from "../Loading";
 import Button from "../Button";
 import Input from "../Input";
 import BigLogo from "../BigLogo";
@@ -11,24 +13,35 @@ export default function SignUpPage() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
-  function handleSignUp(e){
+  function handleSignUp(e) {
+    setIsLoading(true);
     e.preventDefault();
-    const promise = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up',{
-      email,
-      password,
-      name,
-      image
+    const promise = axios.post(
+      "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up",
+      {
+        email,
+        password,
+        name,
+        image,
+      }
+    );
+    promise.then(() => navigate("/"));
+
+    promise.catch(() => {
+      alert("Confira seus dados e tente novamente");
+      setIsLoading(false);
     });
-    promise.then(response=> console.log(response));
-    promise.catch(error=> console.log(error.response));
   }
-  
+
   return (
     <Container>
       <BigLogo />
       <form onSubmit={handleSignUp}>
         <Input
+          disabled={isLoading}
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -36,6 +49,7 @@ export default function SignUpPage() {
           placeholder="email"
         />
         <Input
+          disabled={isLoading}
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -43,6 +57,7 @@ export default function SignUpPage() {
           placeholder="senha"
         />
         <Input
+          disabled={isLoading}
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -50,13 +65,16 @@ export default function SignUpPage() {
           placeholder="nome"
         />
         <Input
+          disabled={isLoading}
           type="url"
           value={image}
           onChange={(e) => setImage(e.target.value)}
           name="url"
           placeholder="foto"
         />
-        <Button type="submit">Cadastrar</Button>
+        <Button disabled={isLoading} type="submit">
+          {isLoading ? <Loading /> : "Cadastrar"}
+        </Button>
       </form>
       <StyledLink to="/">Já tem uma conta? Faça login!</StyledLink>
     </Container>

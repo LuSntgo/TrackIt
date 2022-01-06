@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Container, StyledLink } from "./style";
+import { useNavigate } from "react-router-dom";
+
 import Input from "../Input";
 import BigLogo from "../BigLogo";
 import Button from "../Button";
-import { useNavigate } from "react-router-dom";
 import Loading from "../Loading";
 
 function LoginPage({ setToken }) {
