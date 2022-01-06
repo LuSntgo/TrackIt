@@ -14,6 +14,11 @@ const Button = styled.button`
 
   margin-bottom: 10px;
   border-radius: 5px;
-`;
+  
+  &:disabled{
+    background-color:#52B6FF;
+  }  
+`
+;
 
 export default Button;

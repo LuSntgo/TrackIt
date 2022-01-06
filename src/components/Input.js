@@ -15,10 +15,14 @@ const Input = styled.input`
   border-radius: 5px;
 
 
-  ::placeholder {
+  &::placeholder {
     color: #DBDBDB;
     font-family: "Lexend Deca", sans-serif;
   }
+
+  &:disabled{
+    background: #F2F2F2;
+  }  
 `;
 
 export default Input;

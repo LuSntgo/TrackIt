@@ -5,14 +5,14 @@ import SignUpPage from "./components/SignUpPage";
 import TodayPage from "./components/TodayPage"
 
 export default function App() {
-    //const [token, setToken] = useState setToken={setToken}
+    const [token, setToken] = useState('');
 
     return (
         <BrowserRouter>
         <Routes>
-        <Route path="/" element={<LoginPage  />} /> 
+        <Route path="/" element={<LoginPage setToken={setToken} />} /> 
         <Route path="/sign-up" element={<SignUpPage />} />
-        <Route path="/today" element={<TodayPage />} />
+        <Route path="/today" element={<TodayPage token={token} />} />
         </Routes>
         </BrowserRouter>
 
