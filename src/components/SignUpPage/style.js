@@ -14,11 +14,6 @@ const Container = styled.div`
   gap: 16px;
 
 `;
-const BigLogo = styled.img`
- width: 180px;
-  height: 178.38px;
-  padding-bottom: 20px;
-`;
 
 const StyledLink = styled(Link)`
   height: 40px;
@@ -31,5 +26,4 @@ const StyledLink = styled(Link)`
 export {
     Container,
     StyledLink,
-    BigLogo
 }

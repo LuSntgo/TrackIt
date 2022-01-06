@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import biglogo from "../../assets/biglogo.png"
+import { Container, StyledLink } from "./style";
 import Button from "../Button";
 import Input from "../Input";
-import { BigLogo, Container, StyledLink } from "./style";
+import BigLogo from "../BigLogo";
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
@@ -11,7 +11,7 @@ export default function SignUpPage() {
   const [image, setImage] = useState("");
   return (
     <Container>
-     <BigLogo src={biglogo} alt="big-logo" />
+     <BigLogo />
       <form>
         <Input
           type="email"
