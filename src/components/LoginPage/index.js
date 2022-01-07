@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
+import UserContext from '../../contexts/UserContext'
 import Input from "../Input";
 import BigLogo from "../BigLogo";
 import Button from "../Button";
@@ -12,6 +14,7 @@ function LoginPage({ setToken }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const {avatar, setAvatar} = useContext(UserContext);
   const navigate = useNavigate();
 
   function handleLogin(e) {
@@ -26,6 +29,7 @@ function LoginPage({ setToken }) {
     );
     promise.then((response) => {
       setToken(response.data.token);
+      setAvatar(response.data.image);
       navigate("/today");
     });
 

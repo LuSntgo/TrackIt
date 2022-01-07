@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Loading from '../Loading'
+//import Loading from '../Loading'
+import Top from "../Top";
 
 export default function TodayPage({token}) {
 const [items, setItems] = useState(null);
@@ -19,6 +20,7 @@ useEffect(()=>{
 
 return (
     <>
+    <Top />
     <h1>Hoje</h1>
     
     </>

@@ -12,7 +12,7 @@ export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [image, setImage] = useState("");
+  const [avatar, setAvatar] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ export default function SignUpPage() {
         email,
         password,
         name,
-        image,
+        avatar,
       }
     );
     promise.then(() => navigate("/"));
@@ -67,8 +67,8 @@ export default function SignUpPage() {
         <Input
           disabled={isLoading}
           type="url"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
+          value={avatar}
+          onChange={(e) => setAvatar(e.target.value)}
           name="url"
           placeholder="foto"
         />
