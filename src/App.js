@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
 import SignUpPage from "./components/SignUpPage";
 import TodayPage from "./components/TodayPage";
+import HabitsPage from "./components/HabitsPage";
 
 export default function App() {
   const [token, setToken] = useState("");
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/" element={<LoginPage setToken={setToken} />} />
           <Route path="/sign-up" element={<SignUpPage />} />
           <Route path="/today" element={<TodayPage token={token} />} />
+          <Route path="/habits" element={<HabitsPage token={token} />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
