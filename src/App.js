@@ -8,9 +8,10 @@ import TodayPage from "./components/TodayPage";
 export default function App() {
   const [token, setToken] = useState("");
   const [avatar, setAvatar] = useState();
+  const [progress, setProgress] = useState();
 
   return (
-    <UserContext.Provider value={{ avatar, setAvatar }}>
+    <UserContext.Provider value={{ avatar, setAvatar, progress, setProgress }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage setToken={setToken} />} />
