@@ -118,7 +118,11 @@ export default function HabitsPage() {
             </div>
 
             <div className="buttonHabit">
-              <CancelButton disabled={isLoading} type="button">
+              <CancelButton
+                onClick={() => setNewTask(false)}
+                disabled={isLoading}
+                type="button"
+              >
                 {isLoading ? <Loading /> : "Cancelar"}
               </CancelButton>
               <SaveButton disabled={isLoading} type="submit">

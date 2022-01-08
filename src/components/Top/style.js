@@ -14,6 +14,7 @@ const Header = styled.div`
   justify-content: start;
   align-items: start;
   gap: 16px;
+  z-index: 320;
 
   img {
     position: fixed;

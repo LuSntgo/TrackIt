@@ -12,7 +12,6 @@ export default function TodayPage() {
   const { token } = useContext(UserContext);
   const auth = { headers: { Authorization: `Bearer ${token}` } };
   //const [isLoading, setIsLoading] = useState(true);
-  console.log(token);
   useEffect(() => {
     renderTodayPage();
   }, []);

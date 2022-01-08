@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
   background-color: #f2f2f2;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
-
+  padding-bottom: 100px;
   align-items: center;
   flex-direction: column;
 
@@ -44,6 +44,7 @@ const Container = styled.div`
   .dayHabbit {
     width: 100%;
     margin-left: 35px;
+
     display: flex;
     justify-content: start;
     flex-direction: row;
@@ -51,7 +52,7 @@ const Container = styled.div`
   }
 `;
 const NewHabit = styled.div`
-  height: 20vh;
+  min-height: 20vh;
   width: 100%;
   padding: 100px 16px 20px 16px;
   display: flex;
