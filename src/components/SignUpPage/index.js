@@ -35,7 +35,6 @@ export default function SignUpPage() {
       setIsLoading(false);
     });
   }
-
   return (
     <Container>
       <BigLogo />

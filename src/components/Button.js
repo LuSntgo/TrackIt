@@ -6,7 +6,7 @@ const Button = styled.button`
 
   border: 1px solid #d5d5d5;
   background: #52b6ff;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Lexend Deca", sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -14,11 +14,10 @@ const Button = styled.button`
 
   margin-bottom: 10px;
   border-radius: 5px;
-  
-  &:disabled{
-    background-color:#52B6FF;
-  }  
-`
-;
+
+  &:disabled {
+    background-color: #52b6ff;
+  }
+`;
 
 export default Button;
