@@ -1,16 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { GetToday } from "../../services/trackit";
 
 //import Loading from '../Loading'
 import Top from "../Top";
 import Menu from "../Menu";
 import Container from "./style";
+import UserContext from "../../contexts/UserContext";
 
-export default function TodayPage({ token }) {
+export default function TodayPage() {
   const [items, setItems] = useState(null);
+  const { token } = useContext(UserContext);
   const auth = { headers: { Authorization: `Bearer ${token}` } };
   //const [isLoading, setIsLoading] = useState(true);
-
+  console.log(token);
   useEffect(() => {
     renderTodayPage();
   }, []);

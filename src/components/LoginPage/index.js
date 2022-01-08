@@ -10,11 +10,11 @@ import BigLogo from "../BigLogo";
 import { Button } from "../Button";
 import Loading from "../Loading";
 
-function LoginPage({ setToken }) {
+function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { setAvatar } = useContext(UserContext);
+  const { setAvatar, setToken } = useContext(UserContext);
   const navigate = useNavigate();
 
   function handleLogin(e) {

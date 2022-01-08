@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-//import UserContext from "../../contexts/UserContext";
 
 import Top from "../Top";
 import Menu from "../Menu";
@@ -7,8 +6,10 @@ import Loading from "../Loading";
 import { CancelButton, SaveButton } from "../Button";
 import { Container, NewHabit, HabitInput, SetDayBox, HabitList } from "./style";
 import { CreateHabit, GetHabits, DeletedHabit } from "../../services/trackit";
+import UserContext from "../../contexts/UserContext";
 
-export default function HabitsPage({ token }) {
+export default function HabitsPage() {
+  const { token } = useContext(UserContext);
   const auth = { headers: { Authorization: `Bearer ${token}` } };
   const [habit, setHabit] = useState([]);
   const [pickDay, setPickDay] = useState([]);

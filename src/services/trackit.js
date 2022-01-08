@@ -2,8 +2,8 @@ import axios from "axios";
 
 const BASE_URL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit";
 
-function GetHabits() {
-  const promise = axios.get(`${BASE_URL}/habits`);
+function GetHabits(auth) {
+  const promise = axios.get(`${BASE_URL}/habits`, auth);
   return promise;
 }
 

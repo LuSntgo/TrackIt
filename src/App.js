@@ -12,13 +12,15 @@ export default function App() {
   const [progress, setProgress] = useState();
 
   return (
-    <UserContext.Provider value={{ avatar, setAvatar, progress, setProgress }}>
+    <UserContext.Provider
+      value={{ avatar, setAvatar, progress, setProgress, token, setToken }}
+    >
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginPage setToken={setToken} />} />
+          <Route path="/" element={<LoginPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/today" element={<TodayPage token={token} />} />
-          <Route path="/habits" element={<HabitsPage token={token} />} />
+          <Route path="/today" element={<TodayPage />} />
+          <Route path="/habits" element={<HabitsPage />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
