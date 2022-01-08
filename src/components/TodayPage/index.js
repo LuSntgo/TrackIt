@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+import { GetToday } from "../../services/trackit";
+
 //import Loading from '../Loading'
 import Top from "../Top";
 import Menu from "../Menu";
@@ -7,20 +8,18 @@ import Container from "./style";
 
 export default function TodayPage({ token }) {
   const [items, setItems] = useState(null);
+  const auth = { headers: { Authorization: `Bearer ${token}` } };
   //const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const promise = axios.get(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/today",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    renderTodayPage();
+  }, []);
+
+  function renderTodayPage() {
+    const promise = GetToday(auth);
     promise.then((response) => setItems(response.data));
     promise.catch((error) => console.log(error.response));
-  }, []);
+  }
 
   return (
     <>

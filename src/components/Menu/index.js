@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //import { useContext } from "react";
 
 import { Footer, StyledLink } from "./style";
@@ -9,7 +10,9 @@ export default function Menu() {
     <div>
       <Footer>
         <StyledLink to="/">Hábitos</StyledLink>
-        <ProgressBar />
+        <Link to="/">
+          <ProgressBar />
+        </Link>
         <StyledLink to="/">Histórico</StyledLink>
       </Footer>
     </div>
