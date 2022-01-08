@@ -33,7 +33,7 @@ function LoginPage({ setToken }) {
       navigate("/today");
     });
 
-    promise.catch((error) => {
+    promise.catch(() => {
       alert("Confira seus dados e tente novamente");
       setIsLoading(false);
     });

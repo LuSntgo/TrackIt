@@ -16,5 +16,9 @@ function CreateHabit(data, auth) {
   const promise = axios.post(`${BASE_URL}/habits`, data, auth);
   return promise;
 }
+function DeletedHabit(id, auth) {
+  const promise = axios.delete(`${BASE_URL}/habits/${id}`, auth);
+  return promise;
+}
 
-export { GetHabits, GetToday, CreateHabit };
+export { GetHabits, GetToday, CreateHabit, DeletedHabit };

@@ -20,27 +20,40 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
   }
+  span {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px;
+    font-size: 17.976px;
+    line-height: 22px;
+    color: #666666;
+  }
   .nameHabit {
-    background: blue;
+    padding-top: 10px;
+    padding-bottom: 8px;
   }
   .buttonHabit {
     padding-left: 105px;
-    padding-top: 50px;
+    padding-top: 30px;
     display: flex;
     flex-direction: row;
     gap: 30px;
   }
   .dayHabbit {
+    width: 100%;
+    margin-left: 35px;
     display: flex;
+    justify-content: start;
     flex-direction: row;
+    gap: 5px;
   }
 `;
 const NewHabit = styled.div`
-  background-color: pink;
   height: 20vh;
   width: 100%;
-  padding: 30px;
-  padding-top: 100px;
+  padding: 100px 16px 20px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,6 +70,11 @@ const NewHabit = styled.div`
 
     font-size: 27px;
     color: #ffffff;
+  }
+  h1 {
+    color: #126ba5;
+    font-size: 22.976px;
+    line-height: 29px;
   }
 `;
 const NameHabit = styled.input`
@@ -109,6 +127,8 @@ const HabitInput = styled.input`
 const SetDayBox = styled.button`
   width: 30px;
   height: 30px;
+  gap: 10;
+
   font-size: 20px;
   font-family: "Lexend Deca", sans-serif;
   color: ${(props) => (props.selected ? "#FFFFFF" : "#DBDBDB")};
@@ -119,4 +139,31 @@ const SetDayBox = styled.button`
   border: 1px solid #d5d5d5;
   border-radius: 5px;
 `;
-export { Container, NewHabit, HabitInput, NameHabit, SetDayBox };
+const HabitList = styled.div`
+  width: 90%;
+  height: 91px;
+  margin: 10px 0;
+  display: flex;
+  padding: 0 15px;
+  gap: 8px;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 7px;
+  position: relative;
+  p {
+    width: 90%;
+    font-size: 20px;
+    line-height: 25px;
+    color: #666666;
+    margin-top: 13px;
+    font-family: "Lexend Deca", sans-serif;
+  }
+  ion-icon {
+    font-size: 15px;
+    position: absolute;
+    top: 9px;
+    right: 8px;
+  }
+`;
+
+export { Container, NewHabit, HabitInput, NameHabit, SetDayBox, HabitList };

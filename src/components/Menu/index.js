@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <div>
       <Footer>
-        <StyledLink to="/">Hábitos</StyledLink>
+        <StyledLink to="/habits">Hábitos</StyledLink>
         <Link to="/">
           <ProgressBar />
         </Link>
