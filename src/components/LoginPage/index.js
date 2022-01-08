@@ -7,7 +7,7 @@ import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
 import Input from "../Input";
 import BigLogo from "../BigLogo";
-import Button from "../Button";
+import { Button } from "../Button";
 import Loading from "../Loading";
 
 function LoginPage({ setToken }) {

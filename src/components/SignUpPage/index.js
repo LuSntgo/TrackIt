@@ -4,7 +4,7 @@ import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
 
 import Loading from "../Loading";
-import Button from "../Button";
+import { Button } from "../Button";
 import Input from "../Input";
 import BigLogo from "../BigLogo";
 
