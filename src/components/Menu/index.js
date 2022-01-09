@@ -10,7 +10,7 @@ export default function Menu() {
     <div>
       <Footer>
         <StyledLink to="/habits">Hábitos</StyledLink>
-        <Link to="/">
+        <Link to="/today">
           <ProgressBar />
         </Link>
         <StyledLink to="/">Histórico</StyledLink>
