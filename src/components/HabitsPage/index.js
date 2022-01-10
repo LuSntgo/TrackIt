@@ -5,7 +5,7 @@ import Menu from "../Menu";
 import Loading from "../Loading";
 import { CancelButton, SaveButton } from "../Button";
 import { Container, NewHabit, HabitInput, SetDayBox, HabitList } from "./style";
-import { CreateHabit, GetHabits, DeletedHabit } from "../../services/trackit";
+import { createHabit, getHabits, deletedHabit } from "../../services/trackit";
 import UserContext from "../../contexts/UserContext";
 
 export default function HabitsPage() {
@@ -30,7 +30,7 @@ export default function HabitsPage() {
   }, []);
 
   function renderHabits() {
-    const promise = GetHabits(auth);
+    const promise = getHabits(auth);
     promise.then((response) => setHabit(response.data));
     promise.catch((error) => console.log(error.response));
   }
@@ -39,7 +39,7 @@ export default function HabitsPage() {
     e.preventDefault();
     setIsLoading();
     const data = { name: taskName, days: pickDay };
-    const promise = CreateHabit(data, auth);
+    const promise = createHabit(data, auth);
     promise.then(() => {
       resetCreateHabit();
       renderHabits();
@@ -63,7 +63,7 @@ export default function HabitsPage() {
   }
   function deleteHabit(id) {
     if (window.confirm("Você deseja deletar esse hábito?")) {
-      const promise = DeletedHabit(id, auth);
+      const promise = deletedHabit(id, auth);
       promise.then(() => renderHabits());
       promise.catch(() => alert("Confira os dados e tente novamente"));
     }

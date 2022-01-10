@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-//MUDAR FUNCOES E TELA DE CARREGAMENTO
+//MUDAR FUNCOES E COLOCAR TELA DE CARREGAMENTO
 
 import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ import Input from "../Input";
 import BigLogo from "../BigLogo";
 import { Button } from "../Button";
 import Loading from "../Loading";
-import { Login } from "../../services/trackit";
+import { login } from "../../services/trackit";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -23,7 +23,7 @@ function LoginPage() {
   function handleLogin(e) {
     setIsLoading(true);
     e.preventDefault();
-    const promise = Login({ email, password });
+    const promise = login({ email, password });
 
     promise.then((response) => {
       setToken(response.data.token);

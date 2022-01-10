@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { GetToday, MarkHabit } from "../../services/trackit";
+import { getToday, markHabit } from "../../services/trackit";
 import dayjs from "dayjs";
 
 import Top from "../Top";
@@ -28,7 +28,7 @@ export default function TodayPage() {
   }, []);
 
   function renderTodayPage() {
-    const promise = GetToday(auth);
+    const promise = getToday(auth);
     promise.then((response) => {
       setHabits(response.data);
       setProgress(() => percentageCounter(response.data));
@@ -37,7 +37,7 @@ export default function TodayPage() {
   }
 
   function handleHabit(id, done) {
-    const promise = MarkHabit(id, done, auth);
+    const promise = markHabit(id, done, auth);
     promise.then(renderTodayPage);
     promise.catch((error) => alert(error.response.data.message));
   }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SignUp } from "../../services/trackit";
+import { signUp } from "../../services/trackit";
 import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ export default function SignUpPage() {
   function handleSignUp(e) {
     setIsLoading(true);
     e.preventDefault();
-    const promise = SignUp({ email, password, name, image: avatar });
+    const promise = signUp({ email, password, name, image: avatar });
 
     promise.then(() => navigate("/"));
 
