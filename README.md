@@ -56,13 +56,15 @@ Neste projeto você irá construir uma aplicação completa de acompanhamento de
 
 ## Tela Histórico
 
-- [x] Deve ser exibido o texto conforme layout## Tech Stack
+- [x] Deve ser exibido o texto conforme layout
+
+## Tech Stack
 
 Linguagens e ferramentas:
 
 <br>
 
-<p align-text="center">
+<p align-text="center" >
 <img src ="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
