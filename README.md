@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<p align-text="center">
+ <a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="src/assets/biglogo.png" height = "160" width = "160" alt="" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Descrição
 
-## Available Scripts
+Neste projeto você irá construir uma aplicação completa de acompanhamento de hábitos! Com direito a cadastro, login e muitas bibliotecas 🙂.
 
-In the project directory, you can run:
+## Requisitos
 
-### `npm start`
+- [x] Não é necessário fazer a versão para desktop, somente mobile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tela de Login
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [x] Deve ser enviado o email e senha para a API conforme documentação <br>
+- [x] Enquanto estiver carregando, os campos e o botão devem ser desabilitados, conforme layout <br>
+- [x] Em caso de sucesso, o usuário deve ser redirecionado para a rota /hoje <br>
+- [x] Em caso de sucesso, o usuário deve ser redirecionado para a rota /hoje <br>
+- [x] Ao clicar no link para se cadastrar, o usuário deve ser redirecionado para a rota /cadastro <br>
 
-### `npm test`
+## Tela de Cadastro
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] Os dados devem ser enviados para a API conforme documentação <br>
+- [x] Enquanto estiver carregando, os campos e o botão devem ser desabilitados, conforme layout <br>
+- [x] Em caso de sucesso, o usuário deve ser redirecionado para a rota / (rota de Login) <br>
+- [x] Em caso de falha, deve ser exibido um alert informando para o usuário e os campos/botão devem ser habilitados novamente <br>
+- [x] Ao clicar no link para logar, o usuário deve ser redirecionado para a rota / (rota de Login) <br>
 
-### `npm run build`
+## Topo e Menu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] Topo e menu devem ter posicionamento fixo e no topo deve ser exibida a foto do usuário conforme layout <br>
+- [x] No menu, os 3 botões de Hábitos, Hoje e Histórico devem redirecionar o usuário para as rotas /habitos, /hoje e /historico respectivamente <br>
+- [x] O botão de Hoje deve exibir uma barra de progresso circular indicando a porcentagem de conclusão de hábitos de hoje do usuário <br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tela Hábitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Carregar os hábitos do usuário, mandando request pra API conforme documentação e exibindo abaixo conforme layout
+- [x] Ao clicar para deletar um hábito, deve ser exibido um `confirm` para confirmar se o usuário gostaria realmente de apagar o hábito. Se sim, deve ser enviado um request pra API conforme documentação e os hábitos recarregados logo em seguida.
+- [x] Caso o usuário não tenha nenhum hábito cadastrado, deve ser exibido o texto conforme layout
+- [x] Ao clicar no botão de "+", deve-se exibir um formulário de cadastro de hábito logo abaixo do título conforme layout
+- [x] O usuário deve inserir o nome do hábito em um campo de texto e selecionar os dias da semana que deseja realizar o hábito conforme layout
+- [x] Ao salvar, devem ser enviados os dados para API conforme documentação
+- [x] Enquanto estiver carregando, o campo de texto e o botão devem ser desabilitados, conforme layout. Os botões dos dias da semana devem ser desabilitados, porém não é necessária mudança visual durante o loading.
+- [x] Em caso de sucesso, os campos devem ser limpos e reabilitados, o formulário deve ser escondido novamente e a lista de hábitos abaixo recarregada
+- [x] Em caso de erro, os campos devem ser reabilitados e um alerta deve indicar o problema para o usuário
+- [x] Ao Cancelar, o formulário deve ser escondido. Caso tenha dados já preenchidos, os mesmos devem ser mantidos caso o usuário reabra o formulário de criação.
 
-### `npm run eject`
+## Tela Hoje
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [x] Carregar os hábitos de hoje do usuário, mandando request pra API conforme documentação e exibindo abaixo conforme layout
+- [x] O título da tela deve exibir o dia de hoje conforme layout
+- [x] No subtítulo deve ser exibida a frase "Nenhum hábito concluído ainda" ou "x% dos hábitos concluídos", dependendo do progresso do usuário
+- [x] Ao marcar ou desmarcar um hábito como concluído, deve ser enviado um request pra API conforme documentação. Não é necessário colocar loading.
+- [x] Ao marcar um hábito como concluído, deve ser colocada em verde a contagem da sequência atual
+- [x] Caso a sequência atual seja igual ao recorde do usuário, este também deve ser exibido em verde
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tela Histórico
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [x] Deve ser exibido o texto conforme layout## Tech Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Linguagens e ferramentas:
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align-text="center">
+<img src ="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<p>
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deploy
 
-### Code Splitting
+O layout da aplicação está disponível no Vercel:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"> </a>
