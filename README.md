@@ -69,11 +69,11 @@ Linguagens e ferramentas:
 
 <br>
 
-<<<<<<< HEAD
+
 <p align-text="center" >
 =======
 <p align="center">
->>>>>>> b0cc223d664c6cd954d71dd05eb08db240b7f47f
+
 <img src ="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
