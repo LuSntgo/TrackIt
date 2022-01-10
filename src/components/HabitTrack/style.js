@@ -27,6 +27,17 @@ const Container = styled.div`
   p {
       margin-bottom: 3px;
   }
+.sequence {
+    font-size: 13px;
+    line-height: 16px;
+    color: #666666;
+    margin-top: 7px;
+ 
+  }
+    .record {
+      color: #8fc549;
+    }
+  }
 `;
 const MarkBox = styled.div`
   width: 69px;

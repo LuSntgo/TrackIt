@@ -5,6 +5,7 @@ export default function HabitTrack({ h, handleHabit }) {
     <Container>
       <div className="center">
         <p className="task-name"> {h.name}</p>
+        <div className="sequence"></div>
         <p>
           Sequência atual:{" "}
           <span className={h.done ? "record" : ""}>

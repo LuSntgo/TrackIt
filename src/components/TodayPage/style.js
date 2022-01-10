@@ -16,6 +16,8 @@ const Container = styled.div`
 const Percentage = styled.div`
   font-size: 18px;
   line-height: 22px;
+  margin-bottom: 28px;
+  color: ${(props) => (props.progress > 0 ? "#8FC549" : "#BABABA")};
   }
 `;
 const Habit = styled.div`
