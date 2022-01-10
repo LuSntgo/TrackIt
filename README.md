@@ -1,4 +1,4 @@
-<p align-text="center">
+<p align="center">
  <a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="src/assets/biglogo.png" height = "160" width = "160" alt="" />
 </p>
 
