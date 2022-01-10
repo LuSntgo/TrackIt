@@ -13,7 +13,7 @@ export default function Menu() {
         <Link to="/today">
           <ProgressBar />
         </Link>
-        <StyledLink to="/">Histórico</StyledLink>
+        <StyledLink to="/history">Histórico</StyledLink>
       </Footer>
     </div>
   );
