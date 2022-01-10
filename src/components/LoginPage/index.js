@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
+
+//MUDAR FUNCOES E TELA DE CARREGAMENTO
+
 import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
@@ -9,6 +11,7 @@ import Input from "../Input";
 import BigLogo from "../BigLogo";
 import { Button } from "../Button";
 import Loading from "../Loading";
+import { Login } from "../../services/trackit";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -20,13 +23,8 @@ function LoginPage() {
   function handleLogin(e) {
     setIsLoading(true);
     e.preventDefault();
-    const promise = axios.post(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login",
-      {
-        email,
-        password,
-      }
-    );
+    const promise = Login({ email, password });
+
     promise.then((response) => {
       setToken(response.data.token);
       setAvatar(response.data.image);

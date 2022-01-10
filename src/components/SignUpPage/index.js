@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { SignUp } from "../../services/trackit";
 import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
 
@@ -19,15 +19,8 @@ export default function SignUpPage() {
   function handleSignUp(e) {
     setIsLoading(true);
     e.preventDefault();
-    const promise = axios.post(
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up",
-      {
-        email,
-        password,
-        name,
-        avatar,
-      }
-    );
+    const promise = SignUp({ email, password, name, image: avatar });
+
     promise.then(() => navigate("/"));
 
     promise.catch(() => {

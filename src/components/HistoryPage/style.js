@@ -6,11 +6,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  background: #e5e5e5;
+  background: #f2f2f2;
 `;
 const History = styled.div`
   margin: 15px;
-  background: #e5e5e5;
   padding-top: 90px;
   h1 {
     font-size: 23px;
