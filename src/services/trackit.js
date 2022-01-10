@@ -21,4 +21,15 @@ function DeletedHabit(id, auth) {
   return promise;
 }
 
-export { GetHabits, GetToday, CreateHabit, DeletedHabit };
+function MarkHabit(id, done, auth) {
+  console.log(id, done, auth);
+  if (done === false) {
+    const promise = axios.post(`${BASE_URL}/habits/${id}/check`, done, auth);
+    return promise;
+  } else {
+    const promise = axios.post(`${BASE_URL}/habits/${id}/uncheck`, done, auth);
+    return promise;
+  }
+}
+
+export { GetHabits, GetToday, CreateHabit, DeletedHabit, MarkHabit };

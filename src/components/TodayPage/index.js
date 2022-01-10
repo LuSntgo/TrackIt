@@ -1,12 +1,13 @@
 import { useState, useEffect, useContext } from "react";
-import { GetToday } from "../../services/trackit";
+import { GetToday, MarkHabit } from "../../services/trackit";
 import dayjs from "dayjs";
 
-//import Loading from '../Loading'
 import Top from "../Top";
 import Menu from "../Menu";
-import Container from "./style";
+
+import { Container, Percentage } from "./style";
 import UserContext from "../../contexts/UserContext";
+import HabitTrack from "../HabitTrack";
 
 export default function TodayPage() {
   const [habits, setHabits] = useState(null);
@@ -21,7 +22,7 @@ export default function TodayPage() {
     "Sexta",
     "Sábado",
   ];
-  //const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     renderTodayPage();
   }, []);
@@ -34,14 +35,24 @@ export default function TodayPage() {
       promise.catch((error) => console.log(error.response));
     });
   }
+
+  function handleHabit(id, done) {
+    const promise = MarkHabit(id, done, auth);
+    promise.then(renderTodayPage);
+    promise.catch((error) => alert(error.response.data.message));
+  }
+  if (habits === null) {
+    return <div></div>;
+  }
+
   function percentageCounter(habitsDaily) {
     let counter = 0;
-    for (let i = 0; i < habitsDaily.lenght; i++) {
+    for (let i = 0; i < habitsDaily.length; i++) {
       if (habitsDaily[i].done) {
         counter++;
       }
     }
-    const total = ((counter * 100) / habitsDaily.lenght).toFixed();
+    const total = ((counter * 100) / habitsDaily.length).toFixed();
     return total;
   }
 
@@ -49,19 +60,23 @@ export default function TodayPage() {
     <>
       <Top />
       <Container>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
-        <h1>Hoje</h1>
+        <span className="weekday-title">
+          {WeekDay[dayjs().day()]},{" "}
+          {dayjs().date() < 10 ? `0${dayjs().date()}` : dayjs().date()}/
+          {dayjs().month() + 1 < 10
+            ? `0${dayjs().month() + 1}`
+            : dayjs().month() + 1}
+        </span>
+        <Percentage progress={progress}>
+          {progress > 0
+            ? `${progress}% de hábitos concluídos`
+            : "Nenhum hábito concluído ainda"}
+        </Percentage>
+        <div className="task">
+          {habits.map((h) => (
+            <HabitTrack key={h.id} h={h} handleHabit={handleHabit} />
+          ))}
+        </div>
       </Container>
       <Menu />
     </>
