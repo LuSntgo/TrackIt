@@ -6,14 +6,7 @@ const TodayButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  left: 50%;
-  bottom: 5vh;
-
-  @media (max-width: 400px) {
-    left: 21vh;
-    bottom: 2vh;
-  }
+  padding-bottom: 50px;
 `;
 
 export default TodayButton;
