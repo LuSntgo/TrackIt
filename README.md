@@ -1,5 +1,5 @@
 <p align="center">
- <a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="src/assets/biglogo.png" height = "160" width = "160" alt="" />
+ <a href="https://track-it-dun.vercel.app/" target="_blank"> <img src="src/assets/biglogo.png" height = "160" width = "160" alt="" />
 </p>
 
 # Descrição
@@ -76,4 +76,4 @@ Linguagens e ferramentas:
 
 O layout da aplicação está disponível no Vercel:
 
-<a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"> </a>
+<a href="https://track-it-dun.vercel.app/" target="_blank"> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"> </a>
