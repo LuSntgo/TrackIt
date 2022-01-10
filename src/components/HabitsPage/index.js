@@ -7,11 +7,12 @@ import { CancelButton, SaveButton } from "../Button";
 import { Container, NewHabit, HabitInput, SetDayBox, HabitList } from "./style";
 import { createHabit, getHabits, deletedHabit } from "../../services/trackit";
 import UserContext from "../../contexts/UserContext";
+import LoadingPage from "../LoadingPage";
 
 export default function HabitsPage() {
   const { token } = useContext(UserContext);
   const auth = { headers: { Authorization: `Bearer ${token}` } };
-  const [habit, setHabit] = useState([]);
+  const [habit, setHabit] = useState(false);
   const [pickDay, setPickDay] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [newTask, setNewTask] = useState(false);
@@ -33,6 +34,15 @@ export default function HabitsPage() {
     const promise = getHabits(auth);
     promise.then((response) => setHabit(response.data));
     promise.catch((error) => console.log(error.response));
+  }
+  if (habit === false) {
+    return (
+      <>
+        <Top />
+        <LoadingPage />
+        <Menu />
+      </>
+    );
   }
 
   function createHabits(e) {

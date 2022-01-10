@@ -8,6 +8,7 @@ import Menu from "../Menu";
 import { Container, Percentage } from "./style";
 import UserContext from "../../contexts/UserContext";
 import HabitTrack from "../HabitTrack";
+import LoadingPage from "../LoadingPage";
 
 export default function TodayPage() {
   const [habits, setHabits] = useState(null);
@@ -26,6 +27,15 @@ export default function TodayPage() {
   useEffect(() => {
     renderTodayPage();
   }, []);
+  if (habits === null) {
+    return (
+      <>
+        <Top />
+        <LoadingPage />
+        <Menu />
+      </>
+    );
+  }
 
   function renderTodayPage() {
     const promise = getToday(auth);

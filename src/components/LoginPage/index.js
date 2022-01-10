@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-
-//MUDAR FUNCOES E COLOCAR TELA DE CARREGAMENTO
-
+import React, { useState, useContext } from "react";
 import { Container, StyledLink } from "./style";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
 
 import UserContext from "../../contexts/UserContext";
 import Input from "../Input";

@@ -8,7 +8,9 @@ const Container = styled.div`
   padding-bottom: 100px;
   align-items: center;
   flex-direction: column;
-
+  .looooo {
+    font-size: 55px;
+  }
   form {
     width: 340px;
     height: 180px;
@@ -26,7 +28,7 @@ const Container = styled.div`
     align-items: center;
 
     padding: 18px;
-    font-size: 17.976px;
+    font-size: 18px;
     line-height: 22px;
     color: #666666;
   }
