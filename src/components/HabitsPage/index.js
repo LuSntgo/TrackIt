@@ -47,13 +47,12 @@ export default function HabitsPage() {
 
   function createHabits(e) {
     e.preventDefault();
-    setIsLoading();
+    setIsLoading(true);
     const data = { name: taskName, days: pickDay };
     const promise = createHabit(data, auth);
     promise.then(() => {
       resetCreateHabit();
       renderHabits();
-      setIsLoading(false);
     });
     promise.catch(() => {
       alert("Confira os dados e tente novamente");

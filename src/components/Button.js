@@ -34,7 +34,7 @@ const CancelButton = styled.button`
   border-radius: 5px;
 
   &:disabled {
-    opacity: 0.7;
+    background-color: #52b6ff;
   }
 `;
 const SaveButton = styled.button`
@@ -51,7 +51,7 @@ const SaveButton = styled.button`
   border-radius: 5px;
 
   &:disabled {
-    opacity: 0.7;
+    background-color: #52b6ff;
   }
 `;
 export { Button, CancelButton, SaveButton };
