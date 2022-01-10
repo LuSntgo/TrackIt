@@ -1,5 +1,5 @@
-<p align-text="center">
- <a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="src/assets/biglogo.png" height = "160" width = "160" alt="" />
+<p align="center">
+ <a href="https://track-it-dun.vercel.app/" target="_blank"> <img src="src/assets/biglogo.png" height = "160" width = "160" alt="" />
 </p>
 
 # Descrição
@@ -57,14 +57,23 @@ Neste projeto você irá construir uma aplicação completa de acompanhamento de
 ## Tela Histórico
 
 - [x] Deve ser exibido o texto conforme layout
+<<<<<<< HEAD
 
 ## Tech Stack
+=======
+ 
+ ## Tech Stack
+>>>>>>> b0cc223d664c6cd954d71dd05eb08db240b7f47f
 
 Linguagens e ferramentas:
 
 <br>
 
+<<<<<<< HEAD
 <p align-text="center" >
+=======
+<p align="center">
+>>>>>>> b0cc223d664c6cd954d71dd05eb08db240b7f47f
 <img src ="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
@@ -76,4 +85,4 @@ Linguagens e ferramentas:
 
 O layout da aplicação está disponível no Vercel:
 
-<a href="https://track-it-ten-eta.vercel.app/" target="_blank"> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"> </a>
+<a href="https://track-it-dun.vercel.app/" target="_blank"> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"> </a>
